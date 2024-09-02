@@ -4,14 +4,12 @@ import java.util.Calendar;
 
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
-import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
 @RestController
-@RequestMapping("/dayofweek")
-public class KadaiFirstController {
+public class KadaiFirstController {	
 	
-	@GetMapping("/{date}")
+	@GetMapping("/dayofweek/{date}")
 	public String dispDayOfWeek (@PathVariable String date) {
 		
 		String year = date.substring(0,4);
